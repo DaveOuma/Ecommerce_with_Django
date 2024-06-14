@@ -16,8 +16,10 @@
     <p>  {{ product.description}}</p>
     <p> Price: {{product.price}}</p>
     <img src="{{product.image.url}}" alt="{{product.name}}">
+    <p> Available: {{product.available|yesno:"Yes,No"}} </p>
  </li>
 {% endfor %}
   </ul>
+  {% comment %} <a href ="{% url 'product_detail'%}" class="back-link"> Back to Product Details</a> {% endcomment %}
 </body>
 </html>
