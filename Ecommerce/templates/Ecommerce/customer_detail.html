@@ -1,10 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <title>Customer List</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  
+  <link rel="stylesheet" href="{% static 'Ecommerce/style.css' %}">
 </head>
 <body>
   <h1>Customer Details</h1>
@@ -20,8 +21,8 @@
        
         
     </div>
-    {% comment %} <a href ="{% url 'customer_list'%}" class="back-link"> Back to Customer List</a> {% endcomment %}
+    
 
 </body>
-{% comment %} <a href ="{% url 'customer_list'%}"> Back to Customer List</a> {% endcomment %}
+{% comment %} <a href ="{% url 'Ecommerce:customer_list' %}"> Back to Customer List</a> {% endcomment %}
 </html>

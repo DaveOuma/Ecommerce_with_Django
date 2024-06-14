@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ecommerce</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="{% static 'Ecommerce/style.css' %}">
+</head>
+<body>
+  <h1>Welcome to Our E-commerce Website</h1>
+  <nav>
+    <ul>
+      <li><a href="{% url 'Ecommerce:product_list' %}">Products</a></li>
+      <li><a href="{% url 'Ecommerce:customer_list' %}">Customers</a></li>
+    </ul>
+  </nav>
+</body>
+
+</html>
+

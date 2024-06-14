@@ -1,16 +1,17 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <title>{{product.name}}</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  
+  <link rel="stylesheet" href="{% static 'Ecommerce/style.css' %}">
 </head>
 <body>
 
     
     <ul>
-           {% for product in product %}
+           {% for product in products %}
         <li>
             <h2>{{product.name}} </h2>
             <p>  {{ product.description}}</p>
@@ -20,8 +21,9 @@
 
         </li>
     {% endfor %}
-    {% comment %} </ul><a href ="{% url 'product_list'%}" class="back-link"> Back to Product List</a> {% endcomment %}
+    
     
 </body>
-{% comment %} </ul><a href ="{% url 'product_list'%}"> Back to Product List</a> {% endcomment %}
+</ul>
+{% comment %} <a href ="{% url 'Ecommerce:product_list' %}"> Back to Product List</a> {% endcomment %}
 </html>

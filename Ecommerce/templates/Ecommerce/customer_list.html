@@ -1,23 +1,24 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <title>Customer List</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  
+  <link rel="stylesheet" href="{% static 'Ecommerce/style.css' %}">
 </head>
 <body>
   <h1>Customer List</h1>
-    <ul>
+  <ul>
     {% for customer in customers %}
-        <li>
-            <a href ="{% url 'customer_detail' customer.pk%}">
-                {{cutomer.first_name}}{{ customer.last_name}}{{ customer.email}}
-            </a>
-        </li>
+      <li>
+        <a href="{% url 'Ecommerce:customer_detail' customer.pk %}">
+          {{ customer.first_name }} {{ customer.last_name }} {{ customer.email }}
+        </a>
+      </li>
     {% endfor %}
-    </ul>
-    {% comment %} <a href ="{% url 'customer_list'%}" class="back-link"> Back to Customer List</a> {% endcomment %}
+  </ul>
+  
 </body>
-{% comment %} <a href ="{% url 'customer_list'%}"> Back to Customer List</a> {% endcomment %}
+{% comment %} <a href="{% url 'Ecommerce:customer_list' %}"> Back to Customer List</a> {% endcomment %}
 </html>

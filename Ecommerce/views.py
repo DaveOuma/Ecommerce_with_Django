@@ -2,6 +2,9 @@ from django.shortcuts import get_object_or_404, render
 from .models import Product, Customer 
 
 # Create your views here.
+def home(request):
+    return render(request, 'Ecommerce/home.html')
+
 def product_list(request):
     products = Product.objects.all()
     context = {
