@@ -19,5 +19,5 @@ class Customer(models.Model):
         address = models.TextField(blank=True, null=True)
         created_at = models.DateTimeField(auto_now_add=True)
         
-        def __str__(self):
-            return f"{self.first_name} {self.last_name} {self.email}"
+    def __str__(self):
+        return f"{self.first_name} {self.last_name} {self.email}"
